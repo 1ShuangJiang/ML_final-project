@@ -150,31 +150,29 @@ To reproduce our optimized results, we **directly modified** the files in the or
 
 1.  **Clone this forked repository:**
     ```bash
-    git clone [https://github.com/YourUsername/_HypoSpace.git](https://github.com/YourUsername/_HypoSpace.git)
-    cd _HypoSpace
+    git clone https://github.com/1ShuangJiang/ML_final-project.git
     ```
 
 2.  **Install environment:**
     Please refer to the original HypoSpace project's environment setup tutorial. No further elaboration is provided here.
 
 3.  **Run the benchmarks:**
-    Run the following commands from the root directory (`_HypoSpace/`).
+    Run the following commands from the root directory (`ML_final-project/`).
 
     ```bash
     # 🧬 Run Causal Graphs
     cd causal
     python run_causal_benchmark.py --dataset "causal_datasets_20251027_151438.json" --config "config/config_gpt4o.yaml" --n-samples 30 --query-multiplier 2.0 --seed 33550336
-    cd ..
     
     # 📦 Run 3D Voxel
     cd 3d
     python run_3d_benchmark.py --dataset "datasets/3d_grid3_h3.json" --config "config/config_gpt4o.yaml" --n-samples 9 --query-multiplier 1.0 --seed 33550336
-    cd ..
+
     
     # 🔀 Run Boolean Logic
     cd boolean
     python boolean_benchmark.py --dataset "datasets/boolean_2var.json" --config "config/config_gpt4o.yaml" --n-samples 30 --query-multiplier 2.0 --seed 33550336
-    cd ..
+
     ```
 
 
