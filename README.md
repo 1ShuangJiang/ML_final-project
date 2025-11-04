@@ -20,17 +20,6 @@ This project aims to explore and apply various strategies to enhance the perform
 
 ## 📁Repository Structure
 
-Bash
-
-```
-好的，这是为您整理好的、适合放入 `README.md` 的精简项目目录结构（Markdown格式）：
-
-```markdown
-## 📂 Repository Structure
-
-```
-
-好的，这是您要的将所有中文说明翻译成英文后的Markdown版本：
 
 ```
 
@@ -40,49 +29,49 @@ ML\_final-project/
 |   README.md               \# Project description (the file you are reading)
 |
 \+---3d/                     \# 📦 3D Voxel Reconstruction domain
-|   |   generate\_3d\_dataset\_complete.py
-|   |   run\_3d\_benchmark.py
+|   |   generate_3d_dataset_complete.py
+|   |   run_3d_benchmark.py
 |   |
 |   +---config/
-|   |   |   config\_gpt4o.yaml
+|   |   |   config_gpt4o.yaml
 |   |
 |   +---datasets/
-|   |   |   3d\_grid3\_h3.json
+|   |   |   3d_grid3_h3.json
 |   |
 |   +---modules/
-|   |   |   llm\_interface.py  \# (Modified)
+|   |   |   llm_interface.py  \# (Modified)
 |   |   |   models.py
 |   |
 |   +---checkpoints/        \# (Stores 3D domain checkpoints...)
 |   ---results/            \# (Stores 3D domain raw JSON results...)
 |
 \+---boolean/                \# 🔀 Boolean Logic domain
-|   |   boolean\_benchmark.py  \# (Modified)
-|   |   boolean\_dataset.py
+|   |   boolean_benchmark.py  \# (Modified)
+|   |   boolean_dataset.py
 |   |   ... (Benchmark scripts for ablation studies)
 |   |
 |   +---config/
-|   |   |   config\_gpt4o.yaml
+|   |   |   config_gpt4o.yaml
 |   |
 |   +---datasets/
-|   |   |   boolean\_2var.json
+|   |   |   boolean_2var.json
 |   |
 |   +---modules/
-|   |   |   llm\_interface.py
+|   |   |   llm_interface.py
 |   |   |   models.py
 |   |
 |   +---checkpoints/        \# (Stores Boolean Logic checkpoints...)
 |   ---results/            \# (Stores Boolean Logic ablation study results...)
 |
 \+---causal/                 \# 🧬 Causal Graphs domain
-|   |   generate\_causal\_dataset.py
-|   |   run\_causal\_benchmark.py \# (Modified)
+|   |   generate_causal_dataset.py
+|   |   run_causal_benchmark.py \# (Modified)
 |   |
 |   +---config/
-|   |   |   config\_gpt4o.yaml \# (Modified, added deepseek)
+|   |   |   config_gpt4o.yaml \# (Modified, added deepseek)
 |   |
 |   +---modules/
-|   |   |   llm\_interface.py
+|   |   |   llm_interface.py
 |   |   |   models.py
 |   |
 |   +---checkpoints/        \# (Stores Causal Graphs checkpoints...)
@@ -93,13 +82,13 @@ ML\_final-project/
 |   |   ...
 |
 \+---result/                 \# Our selected final result files
-|   |   3d\_grid3\_h3\_deepseek-chat\_...json
-|   |   boolean\_2var\_deepseek-chat\_...json
-|   |   causal\_datasets\_20251027\_...json
+|   |   3d_grid3_h3_deepseek-chat_...json
+|   |   boolean_2var_deepseek-chat_...json
+|   |   causal_datasets_20251027_...json
 |
-\---result\_image/           \# Charts used in the report
-|   metric\_score\_baseline.png
-|   metric\_score\_optimization.png
+\---result_image/           \# Charts used in the report
+|   metric_score_baseline.png
+|   metric_score_optimization.png
 
 ```
 
