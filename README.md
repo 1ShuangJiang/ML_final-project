@@ -23,7 +23,7 @@ This project aims to explore and apply various strategies to enhance the perform
 
 ```
 
-ML\_final-project/
+ML_final-project/
 |
 |   Final\_Report.pdf        # Our final report
 |   README.md               # Project description (the file you are reading)
@@ -65,10 +65,10 @@ ML\_final-project/
 |
 +---causal/                 # 🧬 Causal Graphs domain
 |   |   generate_causal_dataset.py
-|   |   run_causal_benchmark.py \# (Modified)
+|   |   run_causal_benchmark.py # (Modified)
 |   |
 |   +---config/
-|   |   |   config_gpt4o.yaml \# (Modified, added deepseek)
+|   |   |   config_gpt4o.yaml # (Modified, added deepseek)
 |   |
 |   +---modules/
 |   |   |   llm_interface.py
