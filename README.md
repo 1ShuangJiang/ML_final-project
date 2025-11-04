@@ -52,7 +52,7 @@ Bash
 
 (Applying our various strategies, including CoT, `Roll5` sampling, and expert prompting) 
 
-![image-20251104165928944](C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20251104165928944.png)
+![optimization](https://github.com/1ShuangJiang/ML_final-project/blob/main/result_image/metric_score_optimization.png?raw=true)
 
 ## 🔑 Core Finding
 
