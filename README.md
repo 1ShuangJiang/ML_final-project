@@ -1,4 +1,128 @@
-<div align="center">
+# 🔬HypoSpace Performance Optimization
+
+***A Study on Enhancing LLM Creativity***
+
+This project aims to explore and apply various strategies to enhance the performance of the large language model (**DeepSeek-V3.2-Exp**) on three creativity tasks within the benchmark project (https://github.com/1ShuangJiang/ML_final_project).
+
+## 👥Team Members
+
+| **Name**    | **ID**   | **Work**                                               |
+| ----------- | -------- | :----------------------------------------------------- |
+| CHEN BOLING | CEG25001 | 🧬 Causal Graphs Optimization                           |
+| LI YOURAN   | CEG25032 | 📦 3D Voxel Reconstruction Optimization                 |
+| YANG QIFAN  | CEG25084 | 🔀 Boolean Genetic Interactions Optimization            |
+| CHEN YOUHAO | CEG25008 | Drafting the final report, integrating the readme file |
+
+## 📄 Final Report & Results
+
+- (./submission/Final_Report.pdf)
+- (./submission/results/)
+
+## 📁Repository Structure
+
+Bash
+
+```
+.
+├── HypoSpace_core/     # Original HypoSpace project code
+├── optimisations/        # Our modified scripts, prompts, and configs 
+│   ├── causal_graphs.py
+│   ├── 3d_voxel.py
+│   ├── boolean_logic.py
+│   └── configs/
+├── datasets/             # Generated datasets used for benchmarking
+├── images/               # Images for README
+│   ├── baseline.png
+│   └── optimisation.png
+├── submission/
+│   ├── Final_Report.pdf  # Our 8-page final report 
+│   └── results/          # All JSON experimental results 
+└── README.md             # This file
+```
+
+## 📊 Core Results
+
+### ***Baseline Performance***
+
+(Based on DeepSeek-V3.2-Exp, `temperature=0.7`, and default project parameters) 
+
+![image-20251104165851028](C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20251104165851028.png)
+
+### ***Optimization Performance***
+
+(Applying our various strategies, including CoT, `Roll5` sampling, and expert prompting) 
+
+![image-20251104165928944](C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20251104165928944.png)
+
+## 🔑 Core Finding
+
+Our core finding is that there is a **deep, intrinsic trade-off** between ***V*** (Validity), ***U*** (Uniqueness), and ***R*** (Recovery). The best strategy to enhance LLM creativity is to prioritize maximizing **R** (Recovery) and accept the subsequent drop in ***U*** , as the loss in ***R*** is irreversible, while the loss in ***U*** (from duplicates) can be efficiently removed via post-processing.2
+
+------
+
+## 🛠️ Our Optimization Methods
+
+To reproduce our optimized results, we **directly modified** the files in the original repository. Our optimization parameters are a combination of hard-coded changes and command-line arguments.
+
+### 🧬 Causal Graphs
+
+* **Responsible:** Boling Chen
+* **Strategy:** 1. Chain-of-Thought (CoT) Prompting + 2. Adjusting Query Multiplier parameter.
+* **Modified Files:**
+    * `causal/config/config_gpt4o.yaml`: Added DeepSeek model call parameter: `deepseek: "deepseek-chat"`.
+    * `causal/modules/run_causal_benchmark.py`: Modified the prompt string (starting line 227) to implement CoT.
+    * **Note:** The `query-multiplier` was set to `2.0` via the run command (see "How to Reproduce" section).
+
+### 📦 3D Voxel Reconstruction
+
+* **Responsible:** Youran Li
+* **Strategy:** 1. System Prompt Refactoring + 2. Temperature Adjustment.
+* **Modified Files:**
+    * `3d/config/config_gpt4o.yaml`: Set `temperature: 0.7`. (Note: The user provided `config_gpt4o.ymal`, this has been corrected).
+    * `3d/modules/llm_interface.py`: Modified the prompt string (line 557) to: "You are a creative 3D spatial reasoning expert. Your specialty is generating DIVERSE 3D structures from 2D views. You excel at exploring multiple possible configurations and thinking outside the box."
+    * `3d/config/config_gpt4o.yaml`: Added DeepSeek model call parameter: `deepseek: "deepseek-chat"`.
+
+### 🔀 Boolean Genetic Interactions
+
+* **Responsible:** Qifan Yang
+* **Strategy:** 1. Prompt Refactoring + 2. Adjust parameters (`t=0.9`, `top_p=0.95`, `max_tokens=8000`) and perform 5 continuous rolls to build a candidate pool + 3. Adjust Query Multiplier parameter.
+* **Modified Files:**
+    * `boolean/config/config_gpt4o.yaml`: Added DeepSeek model call parameter: `deepseek: "deepseek-chat"`.
+    * `boolean/boolean_benchmark.py`: Modified the `create_prompt` function to implement CoT and other features.
+    * `boolean/boolean_benchmark.py`: Modified the `evaluate_single_observation_set` function, adjusted parameters, and implemented the 5 continuous rolls for the candidate pool.
+    * **Note:** Added new run files for ablation experiments (`prompt` for prompt refactoring, `tem` for parameter tuning/5-roll, `time` for Query Multiplier adjustment).
+
+## 🚀 How to Reproduce Our (Optimized) Results
+
+1.  **Clone this forked repository:**
+    ```bash
+    git clone [https://github.com/YourUsername/_HypoSpace.git](https://github.com/YourUsername/_HypoSpace.git)
+    cd _HypoSpace
+    ```
+
+2.  **Install environment:**
+    Please refer to the original HypoSpace project's environment setup tutorial. No further elaboration is provided here.
+
+3.  **Run the benchmarks:**
+    Run the following commands from the root directory (`_HypoSpace/`).
+
+    ```bash
+    # 🧬 Run Causal Graphs
+    cd causal
+    python run_causal_benchmark.py --dataset "causal_datasets_20251027_151438.json" --config "config/config_gpt4o.yaml" --n-samples 30 --query-multiplier 2.0 --seed 33550336
+    cd ..
+    
+    # 📦 Run 3D Voxel
+    cd 3d
+    python run_3d_benchmark.py --dataset "datasets/3d_grid3_h3.json" --config "config/config_gpt4o.yaml" --n-samples 9 --query-multiplier 1.0 --seed 33550336
+    cd ..
+    
+    # 🔀 Run Boolean Logic
+    cd boolean
+    python boolean_benchmark.py --dataset "datasets/boolean_2var.json" --config "config/config_gpt4o.yaml" --n-samples 30 --query-multiplier 2.0 --seed 33550336
+    cd ..
+    ```
+
 
 # 🔬 HypoSpace
 
