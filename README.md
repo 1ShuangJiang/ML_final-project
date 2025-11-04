@@ -25,10 +25,10 @@ This project aims to explore and apply various strategies to enhance the perform
 
 ML\_final-project/
 |
-|   Final\_Report.pdf        \# Our final report
-|   README.md               \# Project description (the file you are reading)
+|   Final\_Report.pdf        # Our final report
+|   README.md               # Project description (the file you are reading)
 |
-\+---3d/                     \# 📦 3D Voxel Reconstruction domain
++---3d/                     # 📦 3D Voxel Reconstruction domain
 |   |   generate_3d_dataset_complete.py
 |   |   run_3d_benchmark.py
 |   |
@@ -39,14 +39,14 @@ ML\_final-project/
 |   |   |   3d_grid3_h3.json
 |   |
 |   +---modules/
-|   |   |   llm_interface.py  \# (Modified)
+|   |   |   llm_interface.py  # (Modified)
 |   |   |   models.py
 |   |
-|   +---checkpoints/        \# (Stores 3D domain checkpoints...)
-|   ---results/            \# (Stores 3D domain raw JSON results...)
+|   +---checkpoints/        # (Stores 3D domain checkpoints...)
+|   ---results/            # (Stores 3D domain raw JSON results...)
 |
-\+---boolean/                \# 🔀 Boolean Logic domain
-|   |   boolean_benchmark.py  \# (Modified)
++---boolean/                # 🔀 Boolean Logic domain
+|   |   boolean_benchmark.py  # (Modified)
 |   |   boolean_dataset.py
 |   |   ... (Benchmark scripts for ablation studies)
 |   |
@@ -60,10 +60,10 @@ ML\_final-project/
 |   |   |   llm_interface.py
 |   |   |   models.py
 |   |
-|   +---checkpoints/        \# (Stores Boolean Logic checkpoints...)
-|   ---results/            \# (Stores Boolean Logic ablation study results...)
+|   +---checkpoints/        # (Stores Boolean Logic checkpoints...)
+|   ---results/            # (Stores Boolean Logic ablation study results...)
 |
-\+---causal/                 \# 🧬 Causal Graphs domain
++---causal/                 # 🧬 Causal Graphs domain
 |   |   generate_causal_dataset.py
 |   |   run_causal_benchmark.py \# (Modified)
 |   |
@@ -74,19 +74,19 @@ ML\_final-project/
 |   |   |   llm_interface.py
 |   |   |   models.py
 |   |
-|   +---checkpoints/        \# (Stores Causal Graphs checkpoints...)
-|   ---results/            \# (Stores Causal Graphs raw JSON results...)
+|   +---checkpoints/        # (Stores Causal Graphs checkpoints...)
+|   ---results/            # (Stores Causal Graphs raw JSON results...)
 |
-\+---figs/                   \# Original project's illustrative images
++---figs/                   # Original project's illustrative images
 |   |   overview.png
 |   |   ...
 |
-\+---result/                 \# Our selected final result files
++---result/                 # Our selected final result files
 |   |   3d_grid3_h3_deepseek-chat_...json
 |   |   boolean_2var_deepseek-chat_...json
 |   |   causal_datasets_20251027_...json
 |
-\---result_image/           \# Charts used in the report
++---result_image/           # Charts used in the report
 |   metric_score_baseline.png
 |   metric_score_optimization.png
 
