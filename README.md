@@ -15,30 +15,95 @@ This project aims to explore and apply various strategies to enhance the perform
 
 ## 📄 Final Report & Results
 
-- (./submission/Final_Report.pdf)
-- (./submission/results/)
+- (./Final_Report.pdf)
+- (./result)
 
 ## 📁Repository Structure
 
 Bash
 
 ```
-.
-├── HypoSpace_core/     # Original HypoSpace project code
-├── optimisations/        # Our modified scripts, prompts, and configs 
-│   ├── causal_graphs.py
-│   ├── 3d_voxel.py
-│   ├── boolean_logic.py
-│   └── configs/
-├── datasets/             # Generated datasets used for benchmarking
-├── images/               # Images for README
-│   ├── baseline.png
-│   └── optimisation.png
-├── submission/
-│   ├── Final_Report.pdf  # Our 8-page final report 
-│   └── results/          # All JSON experimental results 
-└── README.md             # This file
+好的，这是为您整理好的、适合放入 `README.md` 的精简项目目录结构（Markdown格式）：
+
+```markdown
+## 📂 Repository Structure
+
 ```
+
+好的，这是您要的将所有中文说明翻译成英文后的Markdown版本：
+
+```
+
+ML\_final-project/
+|
+|   Final\_Report.pdf        \# Our final report
+|   README.md               \# Project description (the file you are reading)
+|
+\+---3d/                     \# 📦 3D Voxel Reconstruction domain
+|   |   generate\_3d\_dataset\_complete.py
+|   |   run\_3d\_benchmark.py
+|   |
+|   +---config/
+|   |   |   config\_gpt4o.yaml
+|   |
+|   +---datasets/
+|   |   |   3d\_grid3\_h3.json
+|   |
+|   +---modules/
+|   |   |   llm\_interface.py  \# (Modified)
+|   |   |   models.py
+|   |
+|   +---checkpoints/        \# (Stores 3D domain checkpoints...)
+|   ---results/            \# (Stores 3D domain raw JSON results...)
+|
+\+---boolean/                \# 🔀 Boolean Logic domain
+|   |   boolean\_benchmark.py  \# (Modified)
+|   |   boolean\_dataset.py
+|   |   ... (Benchmark scripts for ablation studies)
+|   |
+|   +---config/
+|   |   |   config\_gpt4o.yaml
+|   |
+|   +---datasets/
+|   |   |   boolean\_2var.json
+|   |
+|   +---modules/
+|   |   |   llm\_interface.py
+|   |   |   models.py
+|   |
+|   +---checkpoints/        \# (Stores Boolean Logic checkpoints...)
+|   ---results/            \# (Stores Boolean Logic ablation study results...)
+|
+\+---causal/                 \# 🧬 Causal Graphs domain
+|   |   generate\_causal\_dataset.py
+|   |   run\_causal\_benchmark.py \# (Modified)
+|   |
+|   +---config/
+|   |   |   config\_gpt4o.yaml \# (Modified, added deepseek)
+|   |
+|   +---modules/
+|   |   |   llm\_interface.py
+|   |   |   models.py
+|   |
+|   +---checkpoints/        \# (Stores Causal Graphs checkpoints...)
+|   ---results/            \# (Stores Causal Graphs raw JSON results...)
+|
+\+---figs/                   \# Original project's illustrative images
+|   |   overview.png
+|   |   ...
+|
+\+---result/                 \# Our selected final result files
+|   |   3d\_grid3\_h3\_deepseek-chat\_...json
+|   |   boolean\_2var\_deepseek-chat\_...json
+|   |   causal\_datasets\_20251027\_...json
+|
+\---result\_image/           \# Charts used in the report
+|   metric\_score\_baseline.png
+|   metric\_score\_optimization.png
+
+```
+
+
 
 ## 📊 Core Results
 
