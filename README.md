@@ -46,7 +46,7 @@ Bash
 
 (Based on DeepSeek-V3.2-Exp, `temperature=0.7`, and default project parameters) 
 
-![image-20251104165851028](C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20251104165851028.png)
+![baseline](https://github.com/1ShuangJiang/ML_final-project/blob/main/result_image/metric_score_baseline.png?raw=true)
 
 ### ***Optimization Performance***
 
