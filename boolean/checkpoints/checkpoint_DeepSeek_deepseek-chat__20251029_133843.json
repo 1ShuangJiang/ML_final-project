@@ -1,0 +1,1600 @@
+{
+  "run_id": "20251029_133843",
+  "llm_name": "DeepSeek(deepseek-chat)",
+  "n_samples": 30,
+  "n_queries_per_sample": null,
+  "query_multiplier": 2.0,
+  "seed": 33550336,
+  "timestamp": "2025-10-29T16:33:11.556313",
+  "results": [
+    {
+      "observation_set_id": "n3_inputs_01_10_11_outputs_001",
+      "n_observations": 3,
+      "n_ground_truths": 2,
+      "n_queries": 4,
+      "n_valid": 4,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.25,
+      "recovery_rate": 0.5,
+      "all_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "x AND y"
+      ],
+      "unique_all_expressions": [
+        "x AND y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 4086,
+        "completion_tokens": 3649,
+        "total_tokens": 7735
+      },
+      "cost": 0.00159376,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n4_inputs_00_01_10_11_outputs_0101",
+      "n_observations": 4,
+      "n_ground_truths": 3,
+      "n_queries": 6,
+      "n_valid": 6,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.16666666666666666,
+      "recovery_rate": 0.3333333333333333,
+      "all_hypotheses": [
+        "y",
+        "y",
+        "y",
+        "y",
+        "y",
+        "y"
+      ],
+      "valid_hypotheses": [
+        "y",
+        "y",
+        "y",
+        "y",
+        "y",
+        "y"
+      ],
+      "unique_valid_expressions": [
+        "y"
+      ],
+      "unique_all_expressions": [
+        "y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 6206,
+        "completion_tokens": 2606,
+        "total_tokens": 8812
+      },
+      "cost": 0.0015985200000000002,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n2_inputs_01_10_outputs_11",
+      "n_observations": 2,
+      "n_ground_truths": 2,
+      "n_queries": 4,
+      "n_valid": 2,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.5,
+      "valid_rate": 0.5,
+      "novelty_rate": 0.25,
+      "recovery_rate": 0.5,
+      "all_hypotheses": [
+        "x OR y gives (0,0)=0, (0,1)=1, (1,0)=1, (1,1)=1 \u2014 not matching (1,1)=0 here.",
+        "x OR y",
+        "(x OR y) AND NOT (x AND y) but we can't use NOT. With only AND/OR, we can't express XOR",
+        "x OR y"
+      ],
+      "valid_hypotheses": [
+        "x OR y",
+        "x OR y"
+      ],
+      "unique_valid_expressions": [
+        "x OR y"
+      ],
+      "unique_all_expressions": [
+        "x OR y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 4179,
+        "completion_tokens": 5348,
+        "total_tokens": 9527
+      },
+      "cost": 0.0020825,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n4_inputs_00_01_10_11_outputs_0011",
+      "n_observations": 4,
+      "n_ground_truths": 3,
+      "n_queries": 6,
+      "n_valid": 6,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.16666666666666666,
+      "recovery_rate": 0.3333333333333333,
+      "all_hypotheses": [
+        "x",
+        "x",
+        "x",
+        "x",
+        "x",
+        "x"
+      ],
+      "valid_hypotheses": [
+        "x",
+        "x",
+        "x",
+        "x",
+        "x",
+        "x"
+      ],
+      "unique_valid_expressions": [
+        "x"
+      ],
+      "unique_all_expressions": [
+        "x"
+      ],
+      "token_usage": {
+        "prompt_tokens": 6206,
+        "completion_tokens": 666,
+        "total_tokens": 6872
+      },
+      "cost": 0.0010553200000000002,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n1_inputs_01_outputs_1",
+      "n_observations": 1,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 6,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.6,
+      "valid_rate": 0.6,
+      "novelty_rate": 0.1,
+      "recovery_rate": 0.2,
+      "all_hypotheses": [
+        "y",
+        "(NOT x) AND y, but NOT not allowed.",
+        "y",
+        "(NOT x) AND y, but NOT is not allowed. So we need to find an equivalent using only AND, OR. Since we can't use NOT, we can't express this",
+        "y",
+        "y",
+        "(NOT x) AND y, but NOT is not allowed",
+        "y",
+        "y",
+        "(NOT x) AND y, but NOT not allowed. Using only AND, OR: This is tricky. The only way to get output 1 only at (0,1) is essentially y AND (NOT x), which requires NOT. With only AND, OR, we can't express this pattern exactly. Wait, let me check: We need f(0,1)=1, f(0,0)=0, f(1,0)=0, f(1,1)=0. This is exactly y AND (NOT x). Without NOT, we can't express this"
+      ],
+      "valid_hypotheses": [
+        "y",
+        "y",
+        "y",
+        "y",
+        "y",
+        "y"
+      ],
+      "unique_valid_expressions": [
+        "y"
+      ],
+      "unique_all_expressions": [
+        "y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 10397,
+        "completion_tokens": 17245,
+        "total_tokens": 27642
+      },
+      "cost": 0.00628418,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n2_inputs_10_11_outputs_01",
+      "n_observations": 2,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 10,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.1,
+      "recovery_rate": 0.2,
+      "all_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "x AND y"
+      ],
+      "unique_all_expressions": [
+        "x AND y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 10272,
+        "completion_tokens": 8315,
+        "total_tokens": 18587
+      },
+      "cost": 0.00376628,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n2_inputs_00_10_outputs_01",
+      "n_observations": 2,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 5,
+      "n_unique_valid": 2,
+      "n_unique_all": 2,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.5,
+      "valid_rate": 0.5,
+      "novelty_rate": 0.2,
+      "recovery_rate": 0.4,
+      "all_hypotheses": [
+        "x AND NOT y \u2014 but NOT is not allowed.",
+        "x AND NOT y (but NOT not allowed) \u2192 equivalent to x AND (x OR y)? No, that's not correct. Actually, x AND (NOT y) can be rewritten using only AND/OR? No, not possible without NOT. So we need expressions using only AND/OR",
+        "x AND (NOT y) but NOT not allowed \u2192 can't express with only AND/OR",
+        "x AND (x OR y)",
+        "x AND (NOT y) but NOT not allowed. With only AND/OR, can't express this exactly. Wait, check: x=1,y=0 is the only true case. Without NOT, we can't isolate y=0. So no expression possible with only AND/OR for this truth table",
+        "x",
+        "x AND NOT y (but NOT not allowed) \u2192 impossible with only AND/OR.",
+        "x",
+        "x",
+        "x"
+      ],
+      "valid_hypotheses": [
+        "x AND (x OR y)",
+        "x",
+        "x",
+        "x",
+        "x"
+      ],
+      "unique_valid_expressions": [
+        "x AND (x OR y)",
+        "x"
+      ],
+      "unique_all_expressions": [
+        "x AND (x OR y)",
+        "x"
+      ],
+      "token_usage": {
+        "prompt_tokens": 11249,
+        "completion_tokens": 6843,
+        "total_tokens": 18092
+      },
+      "cost": 0.0034909,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n1_inputs_11_outputs_1",
+      "n_observations": 1,
+      "n_ground_truths": 10,
+      "n_queries": 20,
+      "n_valid": 20,
+      "n_unique_valid": 2,
+      "n_unique_all": 2,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.1,
+      "recovery_rate": 0.2,
+      "all_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "x AND y",
+        "x"
+      ],
+      "unique_all_expressions": [
+        "x AND y",
+        "x"
+      ],
+      "token_usage": {
+        "prompt_tokens": 20882,
+        "completion_tokens": 21020,
+        "total_tokens": 41902
+      },
+      "cost": 0.00880908,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n1_inputs_01_outputs_0",
+      "n_observations": 1,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 10,
+      "n_unique_valid": 2,
+      "n_unique_all": 2,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.8,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.2,
+      "recovery_rate": 0.4,
+      "all_hypotheses": [
+        "x",
+        "x AND y",
+        "\", then MechanisticKey",
+        "x AND NOT x (but constants not allowed) \u2192 Actually this is just constant 0, but constants not allowed. So no valid expression",
+        "x",
+        "x AND y",
+        "x",
+        "x AND y",
+        "x",
+        "x"
+      ],
+      "valid_hypotheses": [
+        "x",
+        "x AND y",
+        "\", then MechanisticKey",
+        "x AND NOT x (but constants not allowed) \u2192 Actually this is just constant 0, but constants not allowed. So no valid expression",
+        "x",
+        "x AND y",
+        "x",
+        "x AND y",
+        "x",
+        "x"
+      ],
+      "unique_valid_expressions": [
+        "x",
+        "x AND y"
+      ],
+      "unique_all_expressions": [
+        "x",
+        "x AND y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 10280,
+        "completion_tokens": 17009,
+        "total_tokens": 27289
+      },
+      "cost": 0.006201720000000001,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n3_inputs_00_01_10_outputs_011",
+      "n_observations": 3,
+      "n_ground_truths": 2,
+      "n_queries": 4,
+      "n_valid": 3,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.75,
+      "valid_rate": 0.75,
+      "novelty_rate": 0.25,
+      "recovery_rate": 0.5,
+      "all_hypotheses": [
+        "x OR y",
+        "x OR y",
+        "x OR y\" was already generated, so we cannot repeat it",
+        "x OR y"
+      ],
+      "valid_hypotheses": [
+        "x OR y",
+        "x OR y",
+        "x OR y"
+      ],
+      "unique_valid_expressions": [
+        "x OR y"
+      ],
+      "unique_all_expressions": [
+        "x OR y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 4096,
+        "completion_tokens": 1701,
+        "total_tokens": 5797
+      },
+      "cost": 0.00104972,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n2_inputs_01_10_outputs_01",
+      "n_observations": 2,
+      "n_ground_truths": 3,
+      "n_queries": 6,
+      "n_valid": 4,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.6666666666666666,
+      "valid_rate": 0.6666666666666666,
+      "novelty_rate": 0.16666666666666666,
+      "recovery_rate": 0.3333333333333333,
+      "all_hypotheses": [
+        "x",
+        "x\" \u2014 so we must not output x again. So output only the new ones.)",
+        "x AND NOT y, but NOT is not allowed. So we must use AND/OR only. Let's check: This is x=1, y=0 \u2192 x AND (something). Without NOT, we can't directly express \"x and not y\". But we can use OR: Actually, let's try: We want 1 only at (1,0). Without NOT, we can't isolate that single minterm. So maybe impossible? Wait, let's check: We can use AND/OR to express minterms: (x AND y) is (1,1), (x AND NOT y) is (1,0), (NOT x AND y) is (0,1), (NOT x AND NOT y) is (0,0). Without NOT, we can't express any single minterm except (1,1) and (0,0) trivially. So for case 1: (1,0) only \u2192 impossible without NOT. So discard",
+        "x",
+        "x",
+        "x"
+      ],
+      "valid_hypotheses": [
+        "x",
+        "x",
+        "x",
+        "x"
+      ],
+      "unique_valid_expressions": [
+        "x"
+      ],
+      "unique_all_expressions": [
+        "x"
+      ],
+      "token_usage": {
+        "prompt_tokens": 6732,
+        "completion_tokens": 7527,
+        "total_tokens": 14259
+      },
+      "cost": 0.0030500400000000004,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n2_inputs_00_11_outputs_01",
+      "n_observations": 2,
+      "n_ground_truths": 10,
+      "n_queries": 20,
+      "n_valid": 19,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.95,
+      "valid_rate": 0.95,
+      "novelty_rate": 0.05,
+      "recovery_rate": 0.1,
+      "all_hypotheses": [
+        "`x AND y`",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "x AND y"
+      ],
+      "unique_all_expressions": [
+        "x AND y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 21161,
+        "completion_tokens": 11707,
+        "total_tokens": 32868
+      },
+      "cost": 0.0062405,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {
+          "connection_error": 1
+        }
+      }
+    },
+    {
+      "observation_set_id": "n3_inputs_00_10_11_outputs_001",
+      "n_observations": 3,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 10,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.1,
+      "recovery_rate": 0.2,
+      "all_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "x AND y"
+      ],
+      "unique_all_expressions": [
+        "x AND y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 10392,
+        "completion_tokens": 8843,
+        "total_tokens": 19235
+      },
+      "cost": 0.00393092,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n3_inputs_01_10_11_outputs_011",
+      "n_observations": 3,
+      "n_ground_truths": 3,
+      "n_queries": 6,
+      "n_valid": 5,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.8333333333333334,
+      "valid_rate": 0.8333333333333334,
+      "novelty_rate": 0.16666666666666666,
+      "recovery_rate": 0.3333333333333333,
+      "all_hypotheses": [
+        "x",
+        "x",
+        "x\" was already listed, so we only have that one",
+        "x",
+        "x",
+        "x"
+      ],
+      "valid_hypotheses": [
+        "x",
+        "x",
+        "x",
+        "x",
+        "x"
+      ],
+      "unique_valid_expressions": [
+        "x"
+      ],
+      "unique_all_expressions": [
+        "x"
+      ],
+      "token_usage": {
+        "prompt_tokens": 6167,
+        "completion_tokens": 8502,
+        "total_tokens": 14669
+      },
+      "cost": 0.00324394,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n3_inputs_00_10_11_outputs_011",
+      "n_observations": 3,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 9,
+      "n_unique_valid": 1,
+      "n_unique_all": 2,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 0.9,
+      "novelty_rate": 0.2,
+      "recovery_rate": 0.2,
+      "all_hypotheses": [
+        "x",
+        "x",
+        "x",
+        "x",
+        "x",
+        "x AND y",
+        "x",
+        "x",
+        "x",
+        "x"
+      ],
+      "valid_hypotheses": [
+        "x",
+        "x",
+        "x",
+        "x",
+        "x",
+        "x",
+        "x",
+        "x",
+        "x"
+      ],
+      "unique_valid_expressions": [
+        "x"
+      ],
+      "unique_all_expressions": [
+        "x",
+        "x AND y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 10310,
+        "completion_tokens": 6393,
+        "total_tokens": 16703
+      },
+      "cost": 0.0032334400000000006,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {
+          "connection_error": 1
+        }
+      }
+    },
+    {
+      "observation_set_id": "n3_inputs_01_10_11_outputs_101",
+      "n_observations": 3,
+      "n_ground_truths": 3,
+      "n_queries": 6,
+      "n_valid": 5,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.8333333333333334,
+      "valid_rate": 0.8333333333333334,
+      "novelty_rate": 0.16666666666666666,
+      "recovery_rate": 0.3333333333333333,
+      "all_hypotheses": [
+        "y",
+        "y",
+        "y",
+        "y",
+        "(NOT x AND y) OR (x AND y) = y \u2014 because (NOT x AND y) OR (x AND y) = y.",
+        "y"
+      ],
+      "valid_hypotheses": [
+        "y",
+        "y",
+        "y",
+        "y",
+        "y"
+      ],
+      "unique_valid_expressions": [
+        "y"
+      ],
+      "unique_all_expressions": [
+        "y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 6163,
+        "completion_tokens": 6232,
+        "total_tokens": 12395
+      },
+      "cost": 0.00260778,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n1_inputs_10_outputs_0",
+      "n_observations": 1,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 10,
+      "n_unique_valid": 2,
+      "n_unique_all": 2,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.8,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.2,
+      "recovery_rate": 0.4,
+      "all_hypotheses": [
+        "x AND y",
+        "constant 0 (but constants not allowed) \u2192 so no valid expression without constants? Actually, we can try to express it without constants: impossible with only AND/OR and no constants? Yes, impossible. So skip",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "y",
+        "impossible without constants, so skip"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "constant 0 (but constants not allowed) \u2192 so no valid expression without constants? Actually, we can try to express it without constants: impossible with only AND/OR and no constants? Yes, impossible. So skip",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "y",
+        "impossible without constants, so skip"
+      ],
+      "unique_valid_expressions": [
+        "x AND y",
+        "y"
+      ],
+      "unique_all_expressions": [
+        "x AND y",
+        "y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 10478,
+        "completion_tokens": 12317,
+        "total_tokens": 22795
+      },
+      "cost": 0.00491568,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n1_inputs_10_outputs_1",
+      "n_observations": 1,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 8,
+      "n_unique_valid": 2,
+      "n_unique_all": 2,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.8,
+      "valid_rate": 0.8,
+      "novelty_rate": 0.2,
+      "recovery_rate": 0.4,
+      "all_hypotheses": [
+        "x.",
+        "x",
+        "x OR y",
+        "x",
+        "x",
+        "x AND NOT y, but NOT is not allowed. Since only AND and OR are allowed, I need to find an expression using only AND, OR that matches this. x AND NOT y is not directly expressible with AND/OR only. Actually, with AND and OR only, I can't express NOT directly. So for this truth table, the minimal expression might be more complex or impossible? Wait, no\u2014using only AND and OR, the set of functions I can express is monotonic (if input increases, output doesn't decrease). Let's check: (0,0)\u21920, (0,1)\u21920, (1,0)\u21921, (1,1)\u21920 \u2014 this is not monotonic because increasing from (0,1) to (1,1) changes output from 0 to 1? No, (0,1)\u21920, (1,1)\u21920, so it's fine. Actually, from (0,0) to (1,0): x increases, output goes from 0 to 1 \u2014 that's fine. From (0,1) to (1,1): x increases, output stays 0 \u2014 fine. From (1,0) to (1,1): y increases, output goes from 1 to 0 \u2014 this violates monotonicity! So with only AND and OR, I cannot express a function that decreases when an input increases. Therefore, truth table 1 is not expressible with only AND and OR. So I need to consider only monotonic functions",
+        "x",
+        "x",
+        "x",
+        "x"
+      ],
+      "valid_hypotheses": [
+        "x",
+        "x OR y",
+        "x",
+        "x",
+        "x",
+        "x",
+        "x",
+        "x"
+      ],
+      "unique_valid_expressions": [
+        "x",
+        "x OR y"
+      ],
+      "unique_all_expressions": [
+        "x",
+        "x OR y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 11340,
+        "completion_tokens": 15731,
+        "total_tokens": 27071
+      },
+      "cost": 0.005992280000000001,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n2_inputs_01_11_outputs_11",
+      "n_observations": 2,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 9,
+      "n_unique_valid": 2,
+      "n_unique_all": 2,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.9,
+      "valid_rate": 0.9,
+      "novelty_rate": 0.2,
+      "recovery_rate": 0.4,
+      "all_hypotheses": [
+        "y OR (NOT x) isn't allowed. Actually, this is tricky without NOT. Let's check: when x=1,y=0 \u2192 0, so we need an expression that is false only for (1,0). That's NOT x OR y = x\u2192y. Without NOT, we can't express this purely with AND/OR? Wait, let's check: x\u2192y = NOT x OR y. Without NOT, we can't express implication. So this truth table might not be expressible with only AND/OR. Let's verify: We need f(0,0)=1, f(0,1)=1, f(1,0)=0, f(1,1)=1. The only false is when x=1,y=0. With only AND/OR, we can't make a function that's false for (1,0) but true for (0,0). Because any OR with y will be true when y=1, any AND with x will be false when x=0. Let's systematically check: The minimal expression for this would be NOT x OR y, but NOT is not allowed. So this truth table is not expressible with only AND/OR",
+        "x OR y",
+        "x OR y",
+        "y",
+        "y",
+        "y",
+        "y",
+        "x OR y",
+        "y",
+        "y"
+      ],
+      "valid_hypotheses": [
+        "x OR y",
+        "x OR y",
+        "y",
+        "y",
+        "y",
+        "y",
+        "x OR y",
+        "y",
+        "y"
+      ],
+      "unique_valid_expressions": [
+        "x OR y",
+        "y"
+      ],
+      "unique_all_expressions": [
+        "x OR y",
+        "y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 12475,
+        "completion_tokens": 7124,
+        "total_tokens": 19599
+      },
+      "cost": 0.00374122,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n3_inputs_00_01_11_outputs_001",
+      "n_observations": 3,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 10,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.1,
+      "recovery_rate": 0.2,
+      "all_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "x AND y"
+      ],
+      "unique_all_expressions": [
+        "x AND y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 10392,
+        "completion_tokens": 7297,
+        "total_tokens": 17689
+      },
+      "cost": 0.0034980400000000004,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n2_inputs_10_11_outputs_11",
+      "n_observations": 2,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 9,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.9,
+      "valid_rate": 0.9,
+      "novelty_rate": 0.1,
+      "recovery_rate": 0.2,
+      "all_hypotheses": [
+        "x",
+        "(x AND y) OR (x AND NOT y) OR (NOT x AND NOT y) \u2014 but we can't use NOT. Actually, this is tricky without NOT. Let's check: For (0,0)\u21921, (0,1)\u21920, (1,0)\u21921, (1,1)\u21921. Without NOT, we can try x OR (NOT y) but NOT is not allowed. So maybe no expression without NOT? Wait, let's try: We need output 1 for (0,0) and (1,0) and (1,1), output 0 for (0,1). That means output = 1 when x=1 OR when (x=0 AND y=0). That's x OR (NOT x AND NOT y) = x OR NOT y (since NOT x AND NOT y = NOT (x OR y)? No, that's NOT (x OR y) = NOT x AND NOT y. So x OR (NOT x AND NOT y) = x OR NOT y. But NOT y is not allowed. So maybe no expression without NOT for case 3",
+        "x",
+        "x",
+        "x",
+        "x",
+        "x",
+        "x",
+        "x",
+        "x"
+      ],
+      "valid_hypotheses": [
+        "x",
+        "x",
+        "x",
+        "x",
+        "x",
+        "x",
+        "x",
+        "x",
+        "x"
+      ],
+      "unique_valid_expressions": [
+        "x"
+      ],
+      "unique_all_expressions": [
+        "x"
+      ],
+      "token_usage": {
+        "prompt_tokens": 12038,
+        "completion_tokens": 6929,
+        "total_tokens": 18967
+      },
+      "cost": 0.00362544,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n3_inputs_01_10_11_outputs_111",
+      "n_observations": 3,
+      "n_ground_truths": 2,
+      "n_queries": 4,
+      "n_valid": 3,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.75,
+      "valid_rate": 0.75,
+      "novelty_rate": 0.25,
+      "recovery_rate": 0.5,
+      "all_hypotheses": [
+        "x OR y",
+        "x OR y",
+        "x OR y.",
+        "x OR y"
+      ],
+      "valid_hypotheses": [
+        "x OR y",
+        "x OR y",
+        "x OR y"
+      ],
+      "unique_valid_expressions": [
+        "x OR y"
+      ],
+      "unique_all_expressions": [
+        "x OR y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 4086,
+        "completion_tokens": 4333,
+        "total_tokens": 8419
+      },
+      "cost": 0.0017852800000000002,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n2_inputs_01_10_outputs_00",
+      "n_observations": 2,
+      "n_ground_truths": 2,
+      "n_queries": 4,
+      "n_valid": 4,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.5,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.25,
+      "recovery_rate": 0.5,
+      "all_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y (but that gives 0,0,0,1, so wrong \u2014 wait, that\u2019s wrong: x AND y is 0,0,0,1, so not this.) Actually constant 0:",
+        "NOT x AND NOT y \u2014 not allowed. So no"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y (but that gives 0,0,0,1, so wrong \u2014 wait, that\u2019s wrong: x AND y is 0,0,0,1, so not this.) Actually constant 0:",
+        "NOT x AND NOT y \u2014 not allowed. So no"
+      ],
+      "unique_valid_expressions": [
+        "x AND y"
+      ],
+      "unique_all_expressions": [
+        "x AND y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 4082,
+        "completion_tokens": 4924,
+        "total_tokens": 9006
+      },
+      "cost": 0.0019502,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n2_inputs_01_11_outputs_01",
+      "n_observations": 2,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 8,
+      "n_unique_valid": 2,
+      "n_unique_all": 2,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.8,
+      "valid_rate": 0.8,
+      "novelty_rate": 0.2,
+      "recovery_rate": 0.4,
+      "all_hypotheses": [
+        "x AND y",
+        "`x AND y`",
+        "x AND y",
+        "x AND y",
+        "x",
+        "x AND y",
+        "(0,0)=1 means both false \u2192 output 1, (0,1)=0, (1,0)=0, (1,1)=1. That's x == y, i.e., (x AND y) OR (NOT x AND NOT y), but NOT not allowed. So impossible with only AND/OR without constants. So discard (0,0)=1 case if no NOT allowed. Yes, impossible because to get (0,0)=1 with AND/OR only, you'd need something like OR(NOT x, NOT y) but NOT not allowed. So (0,0) cannot be 1. So only (0,0)=0 possible",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "x AND y",
+        "x"
+      ],
+      "unique_all_expressions": [
+        "x AND y",
+        "x"
+      ],
+      "token_usage": {
+        "prompt_tokens": 10687,
+        "completion_tokens": 9231,
+        "total_tokens": 19918
+      },
+      "cost": 0.00408086,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n4_inputs_00_01_10_11_outputs_0001",
+      "n_observations": 4,
+      "n_ground_truths": 2,
+      "n_queries": 4,
+      "n_valid": 4,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.25,
+      "recovery_rate": 0.5,
+      "all_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "x AND y"
+      ],
+      "unique_all_expressions": [
+        "x AND y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 4134,
+        "completion_tokens": 260,
+        "total_tokens": 4394
+      },
+      "cost": 0.00065156,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n3_inputs_00_01_10_outputs_001",
+      "n_observations": 3,
+      "n_ground_truths": 3,
+      "n_queries": 6,
+      "n_valid": 3,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.5,
+      "valid_rate": 0.5,
+      "novelty_rate": 0.16666666666666666,
+      "recovery_rate": 0.3333333333333333,
+      "all_hypotheses": [
+        "x",
+        "x",
+        "x AND NOT y",
+        "x",
+        "x AND (NOT y) \u2014 but NOT is not allowed.",
+        "x AND (NOT y)"
+      ],
+      "valid_hypotheses": [
+        "x",
+        "x",
+        "x"
+      ],
+      "unique_valid_expressions": [
+        "x"
+      ],
+      "unique_all_expressions": [
+        "x"
+      ],
+      "token_usage": {
+        "prompt_tokens": 6154,
+        "completion_tokens": 6338,
+        "total_tokens": 12492
+      },
+      "cost": 0.0026362000000000004,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n3_inputs_00_01_10_outputs_000",
+      "n_observations": 3,
+      "n_ground_truths": 2,
+      "n_queries": 4,
+      "n_valid": 4,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.75,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.25,
+      "recovery_rate": 0.5,
+      "all_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "`x AND y",
+        "x AND y"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "`x AND y",
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "x AND y"
+      ],
+      "unique_all_expressions": [
+        "x AND y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 4087,
+        "completion_tokens": 2969,
+        "total_tokens": 7056
+      },
+      "cost": 0.0014035000000000002,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n3_inputs_00_01_11_outputs_011",
+      "n_observations": 3,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 7,
+      "n_unique_valid": 1,
+      "n_unique_all": 2,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.9,
+      "valid_rate": 0.7,
+      "novelty_rate": 0.2,
+      "recovery_rate": 0.2,
+      "all_hypotheses": [
+        "x AND y",
+        "x AND y\u201d but it fails (0,1) \u2192 1. So maybe they meant it\u2019s a prior attempt but not consistent? But task says generate expressions consistent with all observations. So x AND y is not valid.",
+        "x AND y",
+        "y",
+        "y",
+        "y",
+        "y",
+        "y",
+        "y",
+        "y"
+      ],
+      "valid_hypotheses": [
+        "y",
+        "y",
+        "y",
+        "y",
+        "y",
+        "y",
+        "y"
+      ],
+      "unique_valid_expressions": [
+        "y"
+      ],
+      "unique_all_expressions": [
+        "x AND y",
+        "y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 10702,
+        "completion_tokens": 8516,
+        "total_tokens": 19218
+      },
+      "cost": 0.0038827600000000003,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n2_inputs_00_01_outputs_00",
+      "n_observations": 2,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 10,
+      "n_unique_valid": 2,
+      "n_unique_all": 2,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.9,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.2,
+      "recovery_rate": 0.4,
+      "all_hypotheses": [
+        "x AND y",
+        "x AND (y OR NOT y) \u2192 uses NOT, so not allowed.",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x",
+        "x AND y",
+        "x AND y"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x AND (y OR NOT y) \u2192 uses NOT, so not allowed.",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x",
+        "x AND y",
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "x AND y",
+        "x"
+      ],
+      "unique_all_expressions": [
+        "x AND y",
+        "x"
+      ],
+      "token_usage": {
+        "prompt_tokens": 10364,
+        "completion_tokens": 9245,
+        "total_tokens": 19609
+      },
+      "cost": 0.00403956,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n2_inputs_00_10_outputs_00",
+      "n_observations": 2,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 10,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.7,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.1,
+      "recovery_rate": 0.2,
+      "all_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "0 (constant False) \u2014 not allowed (no constants allowed).",
+        "x AND y",
+        "x AND y",
+        "0 (but constants not allowed) \u2192 invalid",
+        "0 (constant False) \u2014 but constants not allowed, so no valid expression",
+        "x AND y",
+        "x AND y"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "0 (constant False) \u2014 not allowed (no constants allowed).",
+        "x AND y",
+        "x AND y",
+        "0 (but constants not allowed) \u2192 invalid",
+        "0 (constant False) \u2014 but constants not allowed, so no valid expression",
+        "x AND y",
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "x AND y"
+      ],
+      "unique_all_expressions": [
+        "x AND y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 10379,
+        "completion_tokens": 11429,
+        "total_tokens": 21808
+      },
+      "cost": 0.00465318,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {
+          "timeout": 2
+        }
+      }
+    }
+  ],
+  "total_token_usage": {
+    "prompt_tokens": 270176,
+    "completion_tokens": 240249,
+    "total_tokens": 510425
+  },
+  "total_cost": 0.10509436,
+  "total_errors": 0,
+  "error_types": {}
+}

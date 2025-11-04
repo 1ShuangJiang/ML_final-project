@@ -134,47 +134,53 @@ class BooleanBenchmarkRefined:
 
         rules_text = "\n        ".join(eq_rules)
 
-        prompt = f"""You are given partial observations of a Boolean function with variables: {', '.join(self.variables)}
+        prompt = f"""You are given partial observations of a Boolean function.
 
-            Allowed operators: {operators_str}
+        Variables: {', '.join(self.variables)}
+        Allowed operators: {operators_str}
+        Observations (input → output):
+        {obs_block}
 
-            Observations (input -> output):
-            {obs_block}
+        Prior expressions already ruled out (do not repeat anything equivalent under the rules below):
+        {prior_block}
 
-            Prior expressions generated (avoid repeating any expression 
-            that is equivalent under the rules below):
-            {prior_block}
+        Task
+        ------
+        Produce ONE Boolean expression that is consistent with **all** observations.
+        Output requirements (unchanged):
+        - Use ONLY the listed variables and operators.
+        - Depth ≤ {self.max_depth} levels of nesting.
+        - No Boolean constants True/False.
+        - Structural uniqueness is judged by these rules:
+        {rules_text}
+        - Final answer must be a single line starting with "Expression: ".
+        - Use uppercase operators, lowercase variables, plain ASCII parentheses.
 
-            Task: Generate a single Boolean expression that is consistent with ALL observations.
+        Chain-of-Thought Instructions (do NOT print this section)
+        ---------------------------------------------------------
+        1. PRIVATE SCRATCHPAD: Before giving the final line, work inside a comment block
+        <!--  ...your private reasoning...  -->
+        You may write any length of scratchpad; only the line starting with "Expression: " will be scored.
 
-            Requirements:
-            1. Use ONLY the variables: {', '.join(self.variables)}
-            2. Use ONLY these operators: {', '.join(self.operators)}
-            3. The expression must match all given observations
-            4. Structural uniqueness is judged by these rules:
-            {rules_text}
-            5. Expression depth should be at most {self.max_depth} levels of nesting
-            6. Do not use boolean constants True or False anywhere in the expression.
+        2. DIVERSITY LOOP (do it at least twice):
+        a. Invent a *structurally distinct* candidate expression.
+        b. Check it against every observation.
+        c. If it fails even one observation, mutate or discard it.
+        d. Prefer candidates whose syntax trees differ in *root operator* or *major sub-structure*
+            rather than trivial commutativity.
 
-            Output format: 
-            - Return ONLY the Boolean expression on a single line
-            - Use plain text format (no LaTeX, no markdown, no special formatting)
-            - Use uppercase for operators. 
-            - Use lowercase for variables: x, y
-            - Use parentheses for grouping when needed
-            - Start your response with "Expression: " followed by the expression
-            
-            Examples of correct format:
-            Expression: x AND y
-            Expression: (x OR y) AND NOT x
-            Expression: NOT (x AND y)
-            Expression: NOR(x, y)
-            
-            DO NOT use formats like:
-            - \\(x \\land y\\)  (LaTeX)
-            - `x AND y`  (markdown)
-            - x ∧ y  (mathematical symbols)
-            """
+        3. CREATIVITY TRIGGERS:
+        - Try both “sum-of-products” and “product-of-sums” mindsets.
+        - Experiment with operator nesting that *minimizes* clause count.
+        - Consider whether NOT applied to a sub-expression opens a shorter path.
+        - Ask: “Is there an exotic operator combination that secretly encodes the same truth-table?”
+
+        4. SELECT the shortest (in symbols) expression that remains unique under the rules
+        and perfectly fits all observations.  If several are equally short, pick the one
+        whose *shape* is least similar to any entry in {prior_block}.
+
+        End of instructions.  Begin your answer.
+        """
         return prompt
     
     def parse_llm_response(self, response: str) -> Optional[str]:

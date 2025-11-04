@@ -1,0 +1,2655 @@
+{
+  "run_id": "20251027_173714",
+  "llm_name": "OpenRouter(deepseek/deepseek-chat-v3.1)",
+  "n_samples": 30,
+  "n_queries_per_sample": null,
+  "query_multiplier": 2.0,
+  "query_mode": "adaptive_2.0x",
+  "seed": 33550336,
+  "timestamp": "2025-10-27T18:07:17.672009",
+  "max_edges_constraint": 3,
+  "statistics": {
+    "parse_success_rate": {
+      "mean": 0.1375,
+      "std": 0.28568266194036585,
+      "var": 0.08161458333333335,
+      "min": 0.0,
+      "max": 1.0,
+      "p_value": 0.014793502063789184
+    },
+    "valid_rate": {
+      "mean": 0.12916666666666668,
+      "std": 0.27096150813148523,
+      "var": 0.07342013888888893,
+      "min": 0.0,
+      "max": 1.0,
+      "p_value": 0.01567888269058165
+    },
+    "novelty_rate": {
+      "mean": 0.10833333333333334,
+      "std": 0.22063670491456217,
+      "var": 0.048680555555555574,
+      "min": 0.0,
+      "max": 0.75,
+      "p_value": 0.01307843241828144
+    },
+    "recovery_rate": {
+      "mean": 0.2,
+      "std": 0.4000000000000001,
+      "var": 0.16000000000000006,
+      "min": 0.0,
+      "max": 1.0,
+      "p_value": 0.011654793675504357
+    }
+  },
+  "token_usage": {
+    "prompt_tokens": 13504,
+    "completion_tokens": 44311,
+    "total_tokens": 57815,
+    "avg_tokens_per_sample": 1927.1666666666667,
+    "avg_tokens_per_query": 1927.1666666666667
+  },
+  "cost": {
+    "total_cost": 0.057815,
+    "avg_cost_per_sample": 0.0019271666666666667,
+    "avg_cost_per_query": 0.0019271666666666667
+  },
+  "error_summary": {
+    "total_errors": 156,
+    "error_types": {
+      "rate_limit_429": 3,
+      "unknown_error": 1,
+      "http_error_402": 461
+    },
+    "error_rate": 5.2
+  },
+  "per_sample_results": [
+    {
+      "observation_set_id": "n3_006",
+      "n_observations": 3,
+      "n_ground_truths": 1,
+      "n_queries": 2,
+      "n_valid": 1,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_count": 1,
+      "parse_success_rate": 0.5,
+      "valid_rate": 0.5,
+      "novelty_rate": 0.5,
+      "recovery_rate": 1.0,
+      "token_usage": {
+        "prompt_tokens": 1346,
+        "completion_tokens": 1958,
+        "total_tokens": 3304
+      },
+      "cost": 0.0033040000000000005,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "all_hypotheses": [
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "B",
+              "A"
+            ]
+          ]
+        }
+      ],
+      "valid_hypotheses": [
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "B",
+              "A"
+            ]
+          ]
+        }
+      ],
+      "unique_graphs": [
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "B",
+              "A"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n3_017",
+      "n_observations": 3,
+      "n_ground_truths": 1,
+      "n_queries": 2,
+      "n_valid": 1,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_count": 1,
+      "parse_success_rate": 0.5,
+      "valid_rate": 0.5,
+      "novelty_rate": 0.5,
+      "recovery_rate": 1.0,
+      "token_usage": {
+        "prompt_tokens": 1019,
+        "completion_tokens": 1840,
+        "total_tokens": 2859
+      },
+      "cost": 0.0028590000000000004,
+      "errors": [
+        {
+          "query_index": 1,
+          "attempt": 2,
+          "error_message": "Error querying OpenRouter: Response ended prematurely",
+          "error_type": "unknown_error"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 1,
+        "error_types": {
+          "rate_limit_429": 1,
+          "unknown_error": 1
+        }
+      },
+      "all_hypotheses": [
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "A",
+              "C"
+            ]
+          ]
+        }
+      ],
+      "valid_hypotheses": [
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "A",
+              "C"
+            ]
+          ]
+        }
+      ],
+      "unique_graphs": [
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "A",
+              "C"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n2_016",
+      "n_observations": 2,
+      "n_ground_truths": 2,
+      "n_queries": 4,
+      "n_valid": 3,
+      "n_unique_valid": 2,
+      "n_unique_all": 2,
+      "n_recovered_gts": 2,
+      "parse_success_count": 3,
+      "parse_success_rate": 0.75,
+      "valid_rate": 0.75,
+      "novelty_rate": 0.5,
+      "recovery_rate": 1.0,
+      "token_usage": {
+        "prompt_tokens": 1957,
+        "completion_tokens": 5473,
+        "total_tokens": 7430
+      },
+      "cost": 0.00743,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 429 Client Error: Too Many Requests for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "rate_limit_429"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 1,
+        "error_types": {
+          "rate_limit_429": 2
+        }
+      },
+      "all_hypotheses": [
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "A"
+            ],
+            [
+              "A",
+              "B"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "A"
+            ],
+            [
+              "A",
+              "B"
+            ],
+            [
+              "C",
+              "B"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "A"
+            ],
+            [
+              "A",
+              "B"
+            ]
+          ]
+        }
+      ],
+      "valid_hypotheses": [
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "A"
+            ],
+            [
+              "A",
+              "B"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "A"
+            ],
+            [
+              "A",
+              "B"
+            ],
+            [
+              "C",
+              "B"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "A"
+            ],
+            [
+              "A",
+              "B"
+            ]
+          ]
+        }
+      ],
+      "unique_graphs": [
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "A"
+            ],
+            [
+              "A",
+              "B"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "A"
+            ],
+            [
+              "A",
+              "B"
+            ],
+            [
+              "C",
+              "B"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n3_004",
+      "n_observations": 3,
+      "n_ground_truths": 1,
+      "n_queries": 2,
+      "n_valid": 2,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_count": 2,
+      "parse_success_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.5,
+      "recovery_rate": 1.0,
+      "token_usage": {
+        "prompt_tokens": 1013,
+        "completion_tokens": 1727,
+        "total_tokens": 2740
+      },
+      "cost": 0.0027400000000000002,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "all_hypotheses": [
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "A"
+            ],
+            [
+              "C",
+              "B"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "A"
+            ],
+            [
+              "C",
+              "B"
+            ]
+          ]
+        }
+      ],
+      "valid_hypotheses": [
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "A"
+            ],
+            [
+              "C",
+              "B"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "A"
+            ],
+            [
+              "C",
+              "B"
+            ]
+          ]
+        }
+      ],
+      "unique_graphs": [
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "A"
+            ],
+            [
+              "C",
+              "B"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n2_022",
+      "n_observations": 2,
+      "n_ground_truths": 4,
+      "n_queries": 8,
+      "n_valid": 5,
+      "n_unique_valid": 4,
+      "n_unique_all": 4,
+      "n_recovered_gts": 4,
+      "parse_success_count": 5,
+      "parse_success_rate": 0.625,
+      "valid_rate": 0.625,
+      "novelty_rate": 0.5,
+      "recovery_rate": 1.0,
+      "token_usage": {
+        "prompt_tokens": 5400,
+        "completion_tokens": 22709,
+        "total_tokens": 28109
+      },
+      "cost": 0.028109,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "all_hypotheses": [
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "B"
+            ],
+            [
+              "A",
+              "B"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "B"
+            ],
+            [
+              "A",
+              "C"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "B"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "B"
+            ],
+            [
+              "A",
+              "B"
+            ],
+            [
+              "A",
+              "C"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "B"
+            ]
+          ]
+        }
+      ],
+      "valid_hypotheses": [
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "B"
+            ],
+            [
+              "A",
+              "B"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "B"
+            ],
+            [
+              "A",
+              "C"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "B"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "B"
+            ],
+            [
+              "A",
+              "B"
+            ],
+            [
+              "A",
+              "C"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "B"
+            ]
+          ]
+        }
+      ],
+      "unique_graphs": [
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "B"
+            ],
+            [
+              "A",
+              "B"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "B"
+            ],
+            [
+              "A",
+              "C"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "B"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "C",
+              "B"
+            ],
+            [
+              "A",
+              "B"
+            ],
+            [
+              "A",
+              "C"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n3_010",
+      "n_observations": 3,
+      "n_ground_truths": 2,
+      "n_queries": 4,
+      "n_valid": 2,
+      "n_unique_valid": 2,
+      "n_unique_all": 3,
+      "n_recovered_gts": 2,
+      "parse_success_count": 3,
+      "parse_success_rate": 0.75,
+      "valid_rate": 0.5,
+      "novelty_rate": 0.75,
+      "recovery_rate": 1.0,
+      "token_usage": {
+        "prompt_tokens": 2450,
+        "completion_tokens": 10060,
+        "total_tokens": 12510
+      },
+      "cost": 0.01251,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "all_hypotheses": [
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "A"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "A",
+              "C"
+            ],
+            [
+              "C",
+              "B"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "B",
+              "A"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "A"
+            ]
+          ]
+        }
+      ],
+      "valid_hypotheses": [
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "A"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "B",
+              "A"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "A"
+            ]
+          ]
+        }
+      ],
+      "unique_graphs": [
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "A"
+            ]
+          ]
+        },
+        {
+          "nodes": [
+            "A",
+            "B",
+            "C"
+          ],
+          "edges": [
+            [
+              "B",
+              "A"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "A"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n2_003",
+      "n_observations": 2,
+      "n_ground_truths": 4,
+      "n_queries": 8,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 319,
+        "completion_tokens": 544,
+        "total_tokens": 863
+      },
+      "cost": 0.000863,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 2,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 3,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 4,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 5,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 6,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 7,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 8,
+        "error_types": {
+          "http_error_402": 23
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n2_029",
+      "n_observations": 2,
+      "n_ground_truths": 3,
+      "n_queries": 6,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 2,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 3,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 4,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 5,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 6,
+        "error_types": {
+          "http_error_402": 18
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n3_014",
+      "n_observations": 3,
+      "n_ground_truths": 1,
+      "n_queries": 2,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 2,
+        "error_types": {
+          "http_error_402": 6
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n3_013",
+      "n_observations": 3,
+      "n_ground_truths": 2,
+      "n_queries": 4,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 2,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 3,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 4,
+        "error_types": {
+          "http_error_402": 12
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n1_005",
+      "n_observations": 1,
+      "n_ground_truths": 12,
+      "n_queries": 24,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 2,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 3,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 4,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 5,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 6,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 7,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 8,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 9,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 10,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 11,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 12,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 13,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 14,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 15,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 16,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 17,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 18,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 19,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 20,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 21,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 22,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 23,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 24,
+        "error_types": {
+          "http_error_402": 72
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n2_023",
+      "n_observations": 2,
+      "n_ground_truths": 1,
+      "n_queries": 2,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 2,
+        "error_types": {
+          "http_error_402": 6
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n2_008",
+      "n_observations": 2,
+      "n_ground_truths": 3,
+      "n_queries": 6,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 2,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 3,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 4,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 5,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 6,
+        "error_types": {
+          "http_error_402": 18
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n1_011",
+      "n_observations": 1,
+      "n_ground_truths": 4,
+      "n_queries": 8,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 2,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 3,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 4,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 5,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 6,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 7,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 8,
+        "error_types": {
+          "http_error_402": 24
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n1_004",
+      "n_observations": 1,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 2,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 3,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 4,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 5,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 6,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 7,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 8,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 9,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 10,
+        "error_types": {
+          "http_error_402": 30
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n3_003",
+      "n_observations": 3,
+      "n_ground_truths": 1,
+      "n_queries": 2,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 2,
+        "error_types": {
+          "http_error_402": 6
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n2_014",
+      "n_observations": 2,
+      "n_ground_truths": 1,
+      "n_queries": 2,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 2,
+        "error_types": {
+          "http_error_402": 6
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n2_010",
+      "n_observations": 2,
+      "n_ground_truths": 1,
+      "n_queries": 2,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 2,
+        "error_types": {
+          "http_error_402": 6
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n2_007",
+      "n_observations": 2,
+      "n_ground_truths": 4,
+      "n_queries": 8,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 2,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 3,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 4,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 5,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 6,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 7,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 8,
+        "error_types": {
+          "http_error_402": 24
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n1_003",
+      "n_observations": 1,
+      "n_ground_truths": 4,
+      "n_queries": 8,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 2,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 3,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 4,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 5,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 6,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 7,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 8,
+        "error_types": {
+          "http_error_402": 24
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n3_008",
+      "n_observations": 3,
+      "n_ground_truths": 2,
+      "n_queries": 4,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 2,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 3,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 4,
+        "error_types": {
+          "http_error_402": 12
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n2_027",
+      "n_observations": 2,
+      "n_ground_truths": 1,
+      "n_queries": 2,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 2,
+        "error_types": {
+          "http_error_402": 6
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n1_007",
+      "n_observations": 1,
+      "n_ground_truths": 4,
+      "n_queries": 8,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 2,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 3,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 4,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 5,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 6,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 7,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 8,
+        "error_types": {
+          "http_error_402": 24
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n1_009",
+      "n_observations": 1,
+      "n_ground_truths": 12,
+      "n_queries": 24,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 2,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 3,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 4,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 5,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 6,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 7,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 8,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 9,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 10,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 11,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 12,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 13,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 14,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 15,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 16,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 17,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 18,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 19,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 20,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 21,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 22,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 23,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 24,
+        "error_types": {
+          "http_error_402": 72
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n2_021",
+      "n_observations": 2,
+      "n_ground_truths": 4,
+      "n_queries": 8,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 2,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 3,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 4,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 5,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 6,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 7,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 8,
+        "error_types": {
+          "http_error_402": 24
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n2_025",
+      "n_observations": 2,
+      "n_ground_truths": 4,
+      "n_queries": 8,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 2,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 3,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 4,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 5,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 6,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 7,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 8,
+        "error_types": {
+          "http_error_402": 24
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n2_009",
+      "n_observations": 2,
+      "n_ground_truths": 1,
+      "n_queries": 2,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 2,
+        "error_types": {
+          "http_error_402": 6
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n3_011",
+      "n_observations": 3,
+      "n_ground_truths": 1,
+      "n_queries": 2,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 2,
+        "error_types": {
+          "http_error_402": 6
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n2_026",
+      "n_observations": 2,
+      "n_ground_truths": 1,
+      "n_queries": 2,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 2,
+        "error_types": {
+          "http_error_402": 6
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    },
+    {
+      "observation_set_id": "n2_002",
+      "n_observations": 2,
+      "n_ground_truths": 1,
+      "n_queries": 2,
+      "n_valid": 0,
+      "n_unique_valid": 0,
+      "n_unique_all": 0,
+      "n_recovered_gts": 0,
+      "parse_success_count": 0,
+      "parse_success_rate": 0.0,
+      "valid_rate": 0.0,
+      "novelty_rate": 0.0,
+      "recovery_rate": 0.0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": 0.0,
+      "errors": [
+        {
+          "query_index": 0,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        },
+        {
+          "query_index": 1,
+          "attempt": 3,
+          "error_message": "Error querying OpenRouter: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions",
+          "error_type": "http_error_402"
+        }
+      ],
+      "error_summary": {
+        "total_errors": 2,
+        "error_types": {
+          "http_error_402": 6
+        }
+      },
+      "all_hypotheses": [],
+      "valid_hypotheses": [],
+      "unique_graphs": []
+    }
+  ]
+}

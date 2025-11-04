@@ -1,0 +1,305 @@
+{
+  "run_id": "20251028_162957",
+  "llm_name": "DeepSeek(deepseek-chat)",
+  "n_samples": 30,
+  "n_queries_per_sample": null,
+  "query_multiplier": 1.0,
+  "seed": 33550336,
+  "timestamp": "2025-10-28T17:17:27.041612",
+  "results": [
+    {
+      "observation_set_id": "n3_inputs_01_10_11_outputs_001",
+      "n_observations": 3,
+      "n_ground_truths": 2,
+      "n_queries": 2,
+      "n_valid": 2,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.5,
+      "recovery_rate": 0.5,
+      "all_hypotheses": [
+        "x AND y",
+        "x AND y"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "x AND y"
+      ],
+      "unique_all_expressions": [
+        "x AND y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 10380,
+        "completion_tokens": 549,
+        "total_tokens": 10929
+      },
+      "cost": 0.0016069200000000004,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n4_inputs_00_01_10_11_outputs_0101",
+      "n_observations": 4,
+      "n_ground_truths": 3,
+      "n_queries": 3,
+      "n_valid": 3,
+      "n_unique_valid": 1,
+      "n_unique_all": 2,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.6666666666666666,
+      "recovery_rate": 0.3333333333333333,
+      "all_hypotheses": [
+        "y",
+        "y",
+        "x AND y",
+        "y"
+      ],
+      "valid_hypotheses": [
+        "y",
+        "y",
+        "y"
+      ],
+      "unique_valid_expressions": [
+        "y"
+      ],
+      "unique_all_expressions": [
+        "y",
+        "x AND y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 15830,
+        "completion_tokens": 3268,
+        "total_tokens": 19098
+      },
+      "cost": 0.0031312399999999995,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n2_inputs_01_10_outputs_11",
+      "n_observations": 2,
+      "n_ground_truths": 2,
+      "n_queries": 2,
+      "n_valid": 2,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.6,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.5,
+      "recovery_rate": 0.5,
+      "all_hypotheses": [
+        "x OR y",
+        "OR(x,y)",
+        "(x AND NOT y) OR (NOT x AND y) but NOT is not allowed",
+        "Error querying DeepSeek: HTTPSConnectionPool(host='api.deepseek.com', port=443): Max retries exceeded with url: /chat/completions (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')))",
+        "x OR y",
+        "Error querying DeepSeek: Response ended prematurely"
+      ],
+      "valid_hypotheses": [
+        "x OR y",
+        "x OR y"
+      ],
+      "unique_valid_expressions": [
+        "x OR y"
+      ],
+      "unique_all_expressions": [
+        "x OR y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 8239,
+        "completion_tokens": 9554,
+        "total_tokens": 17793
+      },
+      "cost": 0.00382858,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n4_inputs_00_01_10_11_outputs_0011",
+      "n_observations": 4,
+      "n_ground_truths": 3,
+      "n_queries": 3,
+      "n_valid": 4,
+      "n_unique_valid": 2,
+      "n_unique_all": 2,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.3333333333333333,
+      "novelty_rate": 0.6666666666666666,
+      "recovery_rate": 0.6666666666666666,
+      "all_hypotheses": [
+        "x",
+        "x AND (x OR y)",
+        "x",
+        "x"
+      ],
+      "valid_hypotheses": [
+        "x",
+        "x AND (x OR y)",
+        "x",
+        "x"
+      ],
+      "unique_valid_expressions": [
+        "x",
+        "x AND (x OR y)"
+      ],
+      "unique_all_expressions": [
+        "x",
+        "x AND (x OR y)"
+      ],
+      "token_usage": {
+        "prompt_tokens": 15860,
+        "completion_tokens": 4896,
+        "total_tokens": 20756
+      },
+      "cost": 0.0035912800000000005,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n1_inputs_01_outputs_1",
+      "n_observations": 1,
+      "n_ground_truths": 5,
+      "n_queries": 5,
+      "n_valid": 6,
+      "n_unique_valid": 2,
+      "n_unique_all": 2,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.72,
+      "valid_rate": 1.2,
+      "novelty_rate": 0.4,
+      "recovery_rate": 0.4,
+      "all_hypotheses": [
+        "y",
+        "x OR y",
+        "y AND NOT x \u2014 but NOT not allowed. So impossible with only AND, OR?",
+        "y",
+        "y",
+        "y AND NOT x \u2014 but NOT not allowed, so impossible? Wait, can we represent it without NOT?",
+        "y \u2014 truth table: (0,0)\u21920, (0,1)\u21921, (1,0)\u21920, (1,1)\u21921",
+        "y AND NOT x \u2014 not possible without NOT",
+        "y AND NOT x (but NOT not allowed)",
+        "y",
+        "y \u2014 but then (1,1)=1, not 0. So if (1,1)=0, impossible without NOT.",
+        "y",
+        "Allowed operators: AND, OR. No NOT, no constants"
+      ],
+      "valid_hypotheses": [
+        "y",
+        "x OR y",
+        "y",
+        "y",
+        "y",
+        "y"
+      ],
+      "unique_valid_expressions": [
+        "y",
+        "x OR y"
+      ],
+      "unique_all_expressions": [
+        "x OR y",
+        "y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 28340,
+        "completion_tokens": 34791,
+        "total_tokens": 63131
+      },
+      "cost": 0.01370908,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    },
+    {
+      "observation_set_id": "n2_inputs_10_11_outputs_01",
+      "n_observations": 2,
+      "n_ground_truths": 5,
+      "n_queries": 5,
+      "n_valid": 7,
+      "n_unique_valid": 2,
+      "n_unique_all": 3,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.96,
+      "valid_rate": 1.4,
+      "novelty_rate": 0.6,
+      "recovery_rate": 0.4,
+      "all_hypotheses": [
+        "y",
+        "x AND y",
+        "y",
+        "x",
+        "y",
+        "(0,0)=1 means when x=0,y=0, output 1; (0,1)=0 means when x=0,y=1, output 0; (1,0)=0, (1,1)=1. So true for (0,0) and (1,1) only. That's x XNOR y, but we can't use NOT. Without NOT, impossible with AND/OR only? Let's check: (0,0)=1 means both vars 0 \u2192 output 1, but with AND/OR and no NOT, both vars 0 \u2192 output 0 unless we have constants (not allowed). So (u=1, v=0) impossible with AND/OR only and no constants",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "valid_hypotheses": [
+        "y",
+        "x AND y",
+        "y",
+        "y",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "y",
+        "x AND y"
+      ],
+      "unique_all_expressions": [
+        "y",
+        "x AND y",
+        "x"
+      ],
+      "token_usage": {
+        "prompt_tokens": 29550,
+        "completion_tokens": 16136,
+        "total_tokens": 45686
+      },
+      "cost": 0.008655079999999997,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      }
+    }
+  ],
+  "total_token_usage": {
+    "prompt_tokens": 108199,
+    "completion_tokens": 69194,
+    "total_tokens": 177393
+  },
+  "total_cost": 0.03452218,
+  "total_errors": 0,
+  "error_types": {}
+}

@@ -15,8 +15,7 @@ import traceback
 # Add parent directory to path if needed
 sys.path.append(str(Path(__file__).parent))
 
-from modules.llm_interface import LLMInterface, OpenRouterLLM, OpenAILLM, AnthropicLLM
-
+from modules.llm_interface import LLMInterface, OpenRouterLLM, OpenAILLM, AnthropicLLM,DeepSeekLLM
 
 class Structure3D:
     """Represents a 3D structure (same as in dataset generator)."""
@@ -241,7 +240,18 @@ class Benchmark3D:
             for idx, struct in enumerate(prior_structures, 1):
                 prompt += f"\nAttempt {idx}:\n"
                 prompt += struct.to_string() + "\n"
-        
+        #add CRITICAL---FOCUS
+        # CRITICAL REQUIREMENTS - BALANCE CREATIVITY WITH PHYSICS:
+        # 1. Generate DIVERSE 3D configurations for the same top view
+        # 2. BUT ensure EVERY structure satisfies physical constraints:
+        #    - Blocks MUST be supported from below (no floating blocks!)
+        #    - Every '1' in upper layers must have a '1' directly below it
+        #    - Strictly follow gravity rules - this is NON-NEGOTIABLE
+        # 3. Explore different height patterns while maintaining validity
+        # 4. Your goal: Generate CREATIVE but PHYSICALLY PLAUSIBLE structures
+
+        # Remember: The same 2D top view can correspond to MANY different 3D structures!
+        # Focus on both DIVERSITY and PHYSICAL CORRECTNESS.
         prompt += f"""
         
         Task: Infer the complete 3D structure that could produce these observations.
@@ -1020,6 +1030,16 @@ def setup_llm(llm_type: str, **kwargs) -> LLMInterface:
         
         return OpenRouterLLM(
             model=kwargs.get('model', 'anthropic/claude-3.5-sonnet'),
+            api_key=api_key,
+            temperature=kwargs.get('temperature', 0.7)
+        )
+    elif llm_type == "deepseek":
+        api_key = kwargs.get('api_key') or os.environ.get('DEEPSEEK_API_KEY')
+        if not api_key:
+            raise ValueError("DeepSeek API key required (or set DEEPSEEK_API_KEY env var)")
+
+        return DeepSeekLLM(
+            model=kwargs.get('model', 'deepseek-chat'),
             api_key=api_key,
             temperature=kwargs.get('temperature', 0.7)
         )

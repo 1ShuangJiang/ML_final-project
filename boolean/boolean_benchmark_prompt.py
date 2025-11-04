@@ -145,7 +145,7 @@ class BooleanBenchmarkRefined:
             that is equivalent under the rules below):
             {prior_block}
 
-            Task: Generate a single Boolean expression that is consistent with ALL observations.
+            Task: Task: Generate a list of Boolean expressions that are **consistent with all observations** and **structurally distinct** under the given equivalence rules.
 
             Requirements:
             1. Use ONLY the variables: {', '.join(self.variables)}
@@ -174,6 +174,32 @@ class BooleanBenchmarkRefined:
             - \\(x \\land y\\)  (LaTeX)
             - `x AND y`  (markdown)
             - x ∧ y  (mathematical symbols)
+
+                    
+
+        【Chain-of-Thought + Reverse Verification】  
+        Step-a) Enumerate all semantic truth-tables compatible with the observations (there are 2^(4−n) of them).  
+        Step-b) For each truth-table write the **shortest** Boolean expression.  
+        Step-c) Check for omissions: if you can add one more candidate, state which observation would rule it out.
+
+        【Uniqueness Rules】  
+        - Commutativity: reorderings are the SAME (e.g. x AND y = y AND x).  
+        - Idempotence: duplicates under AND/OR collapse (e.g. x AND x = x).  
+        - Associativity flattening: cascades of the SAME operator are identical regardless of parentheses.  
+        - NO distributivity / absorption / De Morgan — mixed operators stay DIFFERENT.
+
+        【Output Format】  
+        1. Start with “Expression: ” followed by one expression per line.  
+        2. After the list, add a **separate line** starting with “MechanisticKey: ” and give the tuple key for each expression (use `ast.literal_eval` compatible syntax).  
+        3. End with “ReverseCheck: ” plus one sentence: “No more compatible expressions exist.” OR “Missing: <expression> ruled out by <observation>.”
+
+        【Few-shot Examples】  
+        eg1: obs (00→0, 11→1) → Expression: AND(x,y)  MechanisticKey: ('AND', (('VAR', 'x'), ('VAR', 'y')))  
+        eg2: obs (01→1, 10→1) → Expression: XOR(x,y)  MechanisticKey: ('XOR', (('VAR', 'x'), ('VAR', 'y')))  
+        eg3: obs (00→0, 01→1, 10→1) → Expression: OR(x,y)  MechanisticKey: ('OR', (('VAR', 'x'), ('VAR', 'y')))
+
+        【Reverse Prompt】  
+        If you believe there exists **one more** expression that is (i) compatible with all observations and (ii) **not equivalent** to any already listed, please append it below with its mechanistic_key.
             """
         return prompt
     

@@ -174,6 +174,14 @@ class BooleanBenchmarkRefined:
             - \\(x \\land y\\)  (LaTeX)
             - `x AND y`  (markdown)
             - x ∧ y  (mathematical symbols)
+             
+            Chain-of-Thought Process (perform this reasoning step-by-step before outputting the final expression):
+            1. Examine each observation to identify which variable combinations lead to output 1 vs 0.
+            2. Look for patterns: single-variable determinants, pairwise interactions, or higher-order effects.
+            3. Rule out any expression structures that would violate at least one observation.
+            4. Among the remaining valid structures, pick the simplest one (fewest operators, shallowest nesting) that is not structurally equivalent to any prior expression under the given rules.
+            5. Verify that the chosen expression reproduces every observation exactly.
+            6. Output only the final expression line; keep this reasoning private.
             """
         return prompt
     

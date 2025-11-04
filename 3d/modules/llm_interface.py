@@ -511,3 +511,108 @@ class ResponseParser:
                     edges.append((edge_match.group(1), edge_match.group(2)))
         
         return edges
+    
+class DeepSeekLLM(LLMInterface):
+    """
+    DeepSeek API interface.
+    (这是你新增的类)
+    """
+
+    def __init__(
+            self,
+            model: str = "deepseek-chat",
+            api_key: Optional[str] = None,
+            temperature: float = 0.7,
+            max_tokens: int = 4096,
+            base_url: str = "https://api.deepseek.com"  # DeepSeek 官方 API 地址
+    ):
+        if not api_key:
+            raise ValueError("DeepSeek API key is required")
+
+        self.model = model
+        self.api_key = api_key
+        self.temperature = temperature
+        self.max_tokens = max_tokens
+        self.base_url = base_url
+        self.headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json"
+        }
+
+    def query(self, prompt: str) -> str:
+        """Query DeepSeek API."""
+        result = self.query_with_usage(prompt)
+        return result['response']
+
+    def query_with_usage(self, prompt: str) -> Dict[str, Any]:
+        """Query DeepSeek API with usage tracking."""
+        try:
+            # 注意：URL路径是 /chat/completions
+            url = f"{self.base_url}/chat/completions"
+
+            # DeepSeek 兼容 OpenAI 的请求格式
+            payload = {
+                "model": self.model,
+                "messages": [
+                    {"role": "system", "content": "You are a creative 3D spatial reasoning expert. Your specialty is generating DIVERSE 3D structures from 2D views. You excel at exploring multiple possible configurations and thinking outside the box."},# You are an expert in causal inference and graph theory.
+                    {"role": "user", "content": prompt}
+                ],
+                "temperature": self.temperature,
+                "max_tokens": self.max_tokens
+                # ,
+                # "top_p": 0.9,               # 新增：核采样，控制多样性
+                # "frequency_penalty": 0.3,   # 新增：减少重复内容
+                # "presence_penalty": 0.1     # 新增：鼓励新主题
+            }
+
+            response = requests.post(url, headers=self.headers, json=payload)
+            response.raise_for_status()  # 如果失败 (如 401, 404) 会报错
+
+            result = response.json()
+
+            # 解析 usage
+            usage = result.get('usage', {})
+            usage_data = {
+                'prompt_tokens': usage.get('prompt_tokens', 0),
+                'completion_tokens': usage.get('completion_tokens', 0),
+                'total_tokens': usage.get('total_tokens', 0)
+            }
+
+            # 计算 cost
+            pricing = self.get_model_pricing()
+            cost = (usage_data['prompt_tokens'] * pricing['input'] +
+                    usage_data['completion_tokens'] * pricing['output']) / 1_000_000
+
+            return {
+                'response': result['choices'][0]['message']['content'],
+                'usage': usage_data,
+                'cost': cost
+            }
+
+        except requests.exceptions.RequestException as e:
+            return {
+                'response': f"Error querying DeepSeek: {str(e)}",
+                'usage': {'prompt_tokens': 0, 'completion_tokens': 0, 'total_tokens': 0},
+                'cost': 0.0
+            }
+        except (KeyError, IndexError) as e:
+            return {
+                'response': f"Error parsing DeepSeek response: {str(e)}",
+                'usage': {'prompt_tokens': 0, 'completion_tokens': 0, 'total_tokens': 0},
+                'cost': 0.0
+            }
+
+    def get_name(self) -> str:
+        """Get the model name."""
+        return f"DeepSeek({self.model})"
+
+    def get_model_pricing(self) -> Dict[str, float]:
+        """Get pricing per 1M tokens for DeepSeek models."""
+        # !!注意!!: 这里的价格是我基于公开信息写的，你最好自己去核实一下
+        # 价格单位：美元 / 每 100 万 Token
+        pricing_map = {
+            'deepseek-chat': {'input': 0.14, 'output': 0.28},
+            'deepseek-coder': {'input': 0.14, 'output': 0.28},
+        }
+        # 如果模型未在map中，提供一个默认值
+        return pricing_map.get(self.model, {'input': 0.14, 'output': 0.28})

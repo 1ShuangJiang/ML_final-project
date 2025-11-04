@@ -16,7 +16,7 @@ from scipy import stats
 import traceback
 
 from modules.models import CausalGraph
-from modules.llm_interface import LLMInterface, OpenRouterLLM, OpenAILLM, AnthropicLLM
+from modules.llm_interface import LLMInterface, OpenRouterLLM, OpenAILLM, AnthropicLLM,DeepSeekLLM
 from generate_causal_dataset import PerturbationObservation, CausalDatasetGenerator
 
 class CausalBenchmarkEnhanced:
@@ -221,7 +221,13 @@ class CausalBenchmarkEnhanced:
         {prior_block}
         
         Task:
-        Output a single directed acyclic graph (DAG) over the nodes above that explains all observations.
+        
+        Your goal is to find a single DAG that explains all observations.
+        
+        First, perform a step-by-step reasoning process to determine which edges MUST be present,
+        which edges MUST NOT be present, and which edges are possible based on the observations.
+        
+        Second, based on your reasoning, output the graph.
         
         Diversity rule:
         - A "diverse" graph is any valid graph whose edge set is NOT identical to any prior prediction.
@@ -839,7 +845,16 @@ def setup_llm(llm_type: str, **kwargs) -> LLMInterface:
             api_key=api_key,
             temperature=kwargs.get('temperature', 0.7)
         )
-    
+    elif llm_type == "deepseek":
+        api_key = kwargs.get('api_key') or os.environ.get('DEEPSEEK_API_KEY')
+        if not api_key:
+            raise ValueError("DeepSeek API key required (or set DEEPSEEK_API_KEY env var)")
+
+        return DeepSeekLLM(
+            model=kwargs.get('model', 'deepseek-chat'),
+            api_key=api_key,
+            temperature=kwargs.get('temperature', 0.7)
+        )
     else:
         raise ValueError(f"Unknown LLM type: {llm_type}")
 
